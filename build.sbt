@@ -60,19 +60,19 @@ libraryDependencies ++= Seq (
 )
 
 // publishing
-publishMavenStyle := true
+// publishMavenStyle := true
 
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  if (version.value.trim.endsWith("SNAPSHOT"))
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-}
+// publishTo := {
+//   val nexus = "https://oss.sonatype.org/"
+//   if (version.value.trim.endsWith("SNAPSHOT"))
+//     Some("snapshots" at nexus + "content/repositories/snapshots")
+//   else
+//     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+// }
 
-credentials += Credentials(Path.userHome / ".credentials.sonatype")
+// credentials += Credentials(Path.userHome / ".credentials.sonatype")
 
-publishArtifact in Test := false
+// publishArtifact in Test := false
 
 // publishArtifact in (Compile, packageDoc) := false
 
